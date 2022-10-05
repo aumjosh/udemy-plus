@@ -1,0 +1,41 @@
+# creates package.json (-y means no prompts, just edit the file separately to input project data)
+npm init -y
+
+# installs scripts... save-dev flag will mark dependencies as development dependencies so they are not included in the finished product
+npm install @wordpress/scripts --save-dev
+
+# is created to show a comprehensive list of packages that were installed
+package-lock.json 
+
+## will search through the package file for custom commands
+npm run 
+
+
+# in the scripts object within the package.json, we copy the scripts commands from npmjs.com/package/@wordpress/scripts
+# in the setup section
+# for example, run:
+npm run packages-update
+
+# webpack is a tool that will bundle your files
+# the wordpress-scripts package configures webpack for wordpress
+
+# create an /src directory
+# the scripts package has been configured to process files created in the /src directory
+
+
+# 2 commands for processing our files are:
+npm run start # refreshes the bundle on updates
+npm run build # for when you are fininshed with development
+
+# npm run start -- searches for the index file and creates a log of all files found
+
+# now the /build folder should have been created
+
+# YOU MUST ENQUEUE THE INDEX.JS FILE THAT IS IN THE BUILD DIRECTORY, NOT THE SOURCE DIRECTORY
+
+
+
+##############
+
+# run this from plugins directory to create new block plugin
+npx @wordpress/create-block-example
