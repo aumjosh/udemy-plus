@@ -15,7 +15,7 @@ function up_recipe_summary_render_cb($atts, $content, $block) {
     foreach ($postTerms as $key => $term) {
         $url = get_term_meta($term->term_id, 'more_info_url', true);
 
-        $comma = $key === $lastKey ? '' : ',';
+        $comma = $key === $lastKey ? '' : ', ';
 
         $cuisines .= "<a href={$url} target='_blank'>";
         $cuisines .= $term->name;
