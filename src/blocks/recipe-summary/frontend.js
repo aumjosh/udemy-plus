@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// avg-rating gets converted to avgRating
 	// also matching the float datatype in the db
-	const avgRating = parseFloat(block.dataset.avgRating)
+	const avgRating = block.dataset.avgRating ? parseFloat(block.dataset.avgRating) : 0
 
 	// converting to boolean value using !!
 	const loggedIn = !!block.dataset.loggedIn
